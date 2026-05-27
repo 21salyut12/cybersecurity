@@ -55,8 +55,8 @@ Reload service:
 sudo systemctl reload apache2
 ```
 
-<!-- Site Template Img -->
 ![Website's Interface](ddos_imgs/site_template.jpg)
+*Website's Interface*
 
 ### Script
 After the server has been setup, a custom script has been created. This script allows the user to input the target's IP, the amount of TCP SYN messages and number of POST requests to be sent. In a real scenario there would probably be no maximum number of traffic that should be forwarded to the target, but in the case of the current experiment it wasn't necessary.
@@ -84,10 +84,13 @@ For the DDoS part of the simulation, to send traffic from multiple sources, the 
 ## Attack Execution
 To perform the attack, the script was first run only from Kali to observe the target's behavior. The objective was to check if one source of attack would be enough to stall or slow down the target system, which wasn't. But as soon as the second source, Lubuntu, also started sending requests, a spike in terms of CPU and memory usage was identified.
 Due to hardware limitations the experiment couldn't continue because it was taking a toll on the physical host.
-<!--Before Attack Img-->
+
 ![Resource Usage Before the Attack](ddos_imgs/before_attack.png)
-<!--After Attack Img-->
+*Resource Usage Before the Attack*
+
 ![Resource Usage After the Attack](ddos_imgs/after_attack.jpg)
+*Resource Usage After the Attack*
+
 ## Conclusions
 
 ### Objective
