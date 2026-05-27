@@ -55,7 +55,7 @@ Reload service:
 sudo systemctl reload apache2
 ```
 
-<!-- Add image -->
+<!-- Site Template Img -->
 
 # Script
 After the server has been setup, a custom script has been created. This script allows the user to input the target's IP, the amount of TCP SYN messages and number of POST requests to be sent. In a real scenario there would probably be no maximum number of traffic that should be forwarded to the target, but in the case of the current experiment it wasn't necessary.
@@ -80,13 +80,19 @@ done
 # Threat Actors
 For the DDoS part of the simulation, to send traffic from multiple sources, the Kali machine was connected via netcat to the Lubuntu machine.
 
-## Conclusion
-Due to hardware limitations the experiment resulted into the host system increasing resource usage such as CPU and RAM.
+## Attack Execution
+To perform the attack, the script was first run only from Kali to observe the target's behavior. The objective was to check if one source of attack would be enough to stall or slow down the target system, which wasn't. But as soon as the second source, Lubuntu, also started sending requests, a spike in terms of CPU and memory usage was identified.
+Due to hardware limitations the experiment couldn't continue because it was taking a toll on the physical host.
+<!--Before Attack Img-->
+<!--After Attack Img-->
+## Conclusions
 
-## How to mitigate the attack  
-In order to mitigate such an attack I implemented rate-limiting to allow only a certain number of web requests
-per second.
-Other ways to stop a DDoS attack from occuring:
-  - Using a reverse proxy which can absorb attack traffic before reaching the server
-  - Blocking traffic coming from a specific range of IPs
-  - Enable SYN flood protection for TCP-based attacks
+# Objective
+Though there were hardware limitations on the physical host, the experiment achieved it's objective, that being to demonstrate how easy an attack like this can be to executed.
+
+# Mitigation Techniques
+In order to mitigate a DoS or DDoS attack the following mitigation techniques can be implemented:
+1. Rate-limiting to allow only a certain number of web requests per second.
+2. Using a reverse proxy which can absorb attack traffic before reaching the server
+3. Blocking traffic coming from a specific range of IPs via ACL rules or Firewall
+4. Enable SYN flood protection for TCP-based attacks
