@@ -6,8 +6,7 @@ on a Sparky-Linux virtual machine using command-line utilities such as hping3 fo
 POST requests.
 
 ## Conclusion
-Due to hardware limitations and the simplicity of such an attack, the experiment resulted into the host system
-increased resource usage such as CPU and RAM.
+Due to hardware limitations the experiment resulted into the host system increasing resource usage such as CPU and RAM.
 
 ## How to mitigate the attack  
 In order to mitigate such an attack I implemented rate-limiting to allow only a certain number of web requests
