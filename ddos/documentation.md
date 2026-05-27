@@ -25,7 +25,7 @@ Lubuntu is based on Ubuntu, but it's a lightweight version of it. This machine h
 
 ## Setup
 
-# Web Server
+### Web Server
 First, the web server had to be created and to do so the following commands were used in Sparky Linux:
 
 Install the Apache2 service:
@@ -58,7 +58,7 @@ sudo systemctl reload apache2
 <!-- Site Template Img -->
 ![Website's Interface](ddos_imgs/site_template.jpg)
 
-# Script
+### Script
 After the server has been setup, a custom script has been created. This script allows the user to input the target's IP, the amount of TCP SYN messages and number of POST requests to be sent. In a real scenario there would probably be no maximum number of traffic that should be forwarded to the target, but in the case of the current experiment it wasn't necessary.
 
 ```bash
@@ -78,7 +78,7 @@ done
 #print a message that the attack is finished echo „Attack completed!”
 ```
 
-# Threat Actors
+### Threat Actors
 For the DDoS part of the simulation, to send traffic from multiple sources, the Kali machine was connected via netcat to the Lubuntu machine.
 
 ## Attack Execution
@@ -90,10 +90,10 @@ Due to hardware limitations the experiment couldn't continue because it was taki
 ![Resource Usage After the Attack](ddos_imgs/after_attack.jpg)
 ## Conclusions
 
-# Objective
+### Objective
 Though there were hardware limitations on the physical host, the experiment achieved it's objective, that being to demonstrate how easy an attack like this can be to executed.
 
-# Mitigation Techniques
+### Mitigation Techniques
 In order to mitigate a DoS or DDoS attack the following mitigation techniques can be implemented:
 1. Rate-limiting to allow only a certain number of web requests per second.
 2. Using a reverse proxy which can absorb attack traffic before reaching the server
