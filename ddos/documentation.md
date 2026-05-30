@@ -10,17 +10,17 @@ DoS or Denial of Service attack is a threat actor's attempt to make a certain ne
 DDoS is a more sever form of Denial of Service because it doesn't come from just one source/attacker but from multiple all at once which makes this type of attack more efficient than the other version.
 
 ## Key Components
-**VMware**
+### VMware
 To simulate this attack in a controlled environment, VMware has been used.
 VMware is a type 2 hypervisor, which means it runs on top of the host OS. This results into the virtual machines to rely on the host OS to manage resources.
 
-**Kali Linux**
+### Kali Linux
 Kali Linux is a Debian-based Linux distribution used to perform advanced penetration testing and security auditing.
 
-**Sparky Linux**
+### Sparky Linux
 Sparky Linux is also a Debian-based Linux distro, but in the case of project it acts as the target web server.
 
-**Lubuntu Linux**
+### Lubuntu Linux
 Lubuntu is based on Ubuntu, but it's a lightweight version of it. This machine has been used to demonstrate the DDoS attack.
 
 ## Setup
