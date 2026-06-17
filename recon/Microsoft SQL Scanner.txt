@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Enter starting IP address: "
+read FirstIP
+
+echo "Enter last octet in address range: "
+read LastOctet
+
+echo "Enter port number: "
+read port
+
+nmap -sT $FirstIP-$LastOctet -p $port >/dev/null -oG MSSQLscan
+
+cat MSSQLscan | grep open > MSSQLscan2
+
+cat MSSQLscan2
