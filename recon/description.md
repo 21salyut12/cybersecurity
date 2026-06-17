@@ -1,6 +1,6 @@
 # Reconnaissance scripts
 
-## This folder contains reconnaissance custom scripts that either automate or simply gathering information on target systems.
+## This folder contains reconnaissance custom scripts that either automate or simplify gathering information on target systems.
 
 ### A few mitigation solutions
 1. Implement firewalls to filter incoming traffic.
